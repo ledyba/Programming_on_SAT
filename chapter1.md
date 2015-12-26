@@ -9,13 +9,13 @@
 
 $$ P $$
 
-$$ \not P $$
+$$ \lnot P $$
 
-$$ P \and (\not Q) $$
+$$ P \land (\not Q) $$
 
-$$ Q \or R $$
+$$ Q \lor R $$
 
-$$ Q \or ( (\not Q) \and R ) \and R $$
+$$ Q \lor ( (\lnot Q) \land R ) \land R $$
 
 　数学には目がくらむぜ、という人は、C++で書く次のスタイルのほうが好きかもしれません。
 
