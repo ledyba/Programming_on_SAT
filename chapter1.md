@@ -12,7 +12,7 @@ $$ P $$
 
 $$ \lnot P $$
 
-$$ P \land (\not Q) $$
+$$ P \land (\lnot Q) $$
 
 $$ Q \lor R $$
 
