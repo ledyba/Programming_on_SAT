@@ -1,3 +1,6 @@
+# Available on Git Book
+[GitBook](https://ledyba.gitbooks.io/programming-on-sat/content/)の方が読みやすいよ
+
 # Programming on SAT
 
 　この本は、SATソルバーの能力だけを使って様々なプログラミングを行う本です。
