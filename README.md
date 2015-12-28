@@ -1,4 +1,5 @@
-# Available on Git Book
+# Available on GitBook
+
 [GitBook](https://ledyba.gitbooks.io/programming-on-sat/content/)の方が読みやすいよ
 
 # Programming on SAT
