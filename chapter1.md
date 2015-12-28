@@ -16,7 +16,7 @@ $$ P \land (\lnot Q) $$
 
 $$ Q \lor R $$
 
-$$ Q \lor ( (\lnot Q) \land R ) \land R $$
+$$ Q \lor ( ( (\lnot Q) \land R ) \land R ) $$
 
 　数学記号を見ていると目が痛くなる、という人は、C++で書く次のスタイルのほうが好きかもしれません。
 
@@ -28,7 +28,7 @@ p;
 !p;
 p && !p;
 q || r;
-q || (!q && r) && r;
+q || ((!q && r) && r);
 ```
 
 　実はSATソルバーはこのうちの限られたCNFと呼ばれる形のものしか受け取ることができないのですが、これに関してはまたあとで実際に論理式をSATに入力する時に考えます。
@@ -43,7 +43,7 @@ p; // yes. p = true;
 !p; // yes. p = false;
 p && !p; // no. p=trueでもp=falseでも式全体はfalse。
 q || r; // yes. q = true または r = true。
-q || (!q && r) && r; //yes. q = true。
+q || ((!q && r) && r); //yes. q = true。
 ```
 
 　つまり、変数それぞれにtrue/falseを割り当てた時に、論理式の全体がtrueにできることを「充足できる」と言います。
