@@ -4,9 +4,9 @@
 
 ## あなたとSATソルバー、いますぐダウンロード
 
-　なにはともあれ、SATソルバーを入手しないといけませんね。今回は[MiniSAT](http://minisat.se/)（[http://minisat.se/](http://minisat.se/)）というソフトウェアを使います。このソフトウェアはこの業界ではかなり有名で、[SAT Competition](http://www.satcompetition.org/)というSATソルバーの世界大会
+　なにはともあれ、SATソルバーを入手しないといけませんね。今回は[MiniSAT](http://minisat.se/)（[http://minisat.se/](http://minisat.se/)）というソフトウェアを使います。このソフトウェアはこの業界ではかなり有名で、[SAT Competition](http://www.satcompetition.org/)というSATソルバーの世界大会ではこれを改造したものがかなり出場しているようです。
 
-　ubuntu/OSXなら以下の方法でインストールできます。
+　さて、ubuntu/OSXなら以下の方法でインストールできます。
 
 ```bash
 $ sudo apt-get install minisat #Ubuntu
@@ -17,6 +17,16 @@ $ brew install minisat #OSX
 
 ## ハローワールド的な
 
-　何はともあれHello worldです。
+　何はともあれHello worldです。Hello worldを出力させるプログラムではないので、とりあえず、簡単な問題から解いてみましょう。
+
+```c++
+ bool p;
+ p || !p //pがｔでもfでもこの式はtrueになる
+```
+
+これをSATに入力する形式にすると、
+
+
+
 
 
