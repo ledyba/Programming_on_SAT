@@ -17,7 +17,7 @@ $ brew install minisat #OSX
 
 ## ハローワールド的な
 
-　何はともあれHello worldです。Hello worldを出力させるプログラムではないので、とりあえず、簡単な問題から解いてみましょう。
+　何はともあれHello worldです。Hello worldそのものは出来ないので、とりあえず、簡単な問題から解いてみましょう。
 
 ```c++
  bool p;
@@ -25,8 +25,5 @@ $ brew install minisat #OSX
 ```
 
 これをSATに入力する形式にすると、
-
-
-
 
 
