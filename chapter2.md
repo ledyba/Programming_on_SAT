@@ -144,12 +144,14 @@ SAT
 　
 
 ## 引用
-\[1\] SAT Competition 2009: Benchmark Submission Guidelines
+\[1\] SAT Competition 2009: Benchmark Submission Guidelines    
 http://www.satcompetition.org/2009/format-benchmarks2009.html
 
 [1]: http://www.satcompetition.org/2009/format-benchmarks2009.html "SAT Competition 2009: Benchmark Submission Guidelines"
 
-\[2\] オートマトン言語理論 計算論2 <第2版>, 
-ジョン・E・ホッブクロフト (著), R・モトワニ (著), J・D・ウルマン (著), 野崎 昭弘 (翻訳)
+\[2\] オートマトン言語理論 計算論2 <第2版>,    
+ジョン・E・ホッブクロフト (著), R・モトワニ (著), J・D・ウルマン (著), 野崎 昭弘 (翻訳)    
+http://www.amazon.co.jp/dp/4781910270/ref=cm_sw_r_tw_dp_6O2Gwb1YRB125
 
 [2]: http://www.amazon.co.jp/dp/4781910270/ref=cm_sw_r_tw_dp_6O2Gwb1YRB125 "オートマトン言語理論 計算論2 <第2版>"
+
