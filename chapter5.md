@@ -215,14 +215,10 @@ All done, have fun.
   addr-bits:4
   out-addr-bits:2
   sim-steps:22
-minisat sat.txt ans.txt || true
+% minisat sat.txt ans.txt || true
 ...
 SATISFIABLE
-cabal run decode simple-nondet.bf
-Preprocessing library brainfuck2sat-0.1.0.0...
-In-place registering brainfuck2sat-0.1.0.0...
-Preprocessing executable 'bf2sat' for brainfuck2sat-0.1.0.0...
-Running bf2sat...
+% cabal run decode simple-nondet.bf
 ** Brainfuck 2 SAT **
 -- Setting --
   src:,[>++<-]>----[]
