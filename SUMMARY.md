@@ -5,5 +5,5 @@
 * [簡単な論理パズルを解く](chapter2.md)
 * [論理式を扱うHaskellライブラリを使う](chapter3.md)
 * [四則演算をする](chapter4.md)
-* BrainfuckをSATへ変換する
+* [BrainfuckをSATへ変換する](chapter5.md)
 
