@@ -281,7 +281,8 @@ SAT
 
 　というわけで、次はわたしが作ったSATのためのライブラリを紹介します。
 
-## 引用
+## 参考文献
+
 \[1\] SAT Competition 2009: Benchmark Submission Guidelines    
 http://www.satcompetition.org/2009/format-benchmarks2009.html
 
