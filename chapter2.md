@@ -150,8 +150,8 @@ SAT
 
 　場合分けをしてゆっくり考えればわかります：
 
- - 元の`(p && q)`がtrueになる場合、s = falseであれば全体もtrue
- - 元の`(r)`がtrueになる場合、s = trueであれば全体もtrue
+ - 元式の`(p && q)`がtrueになる場合、s = falseであれば全体もtrue
+ - 元式の`(r)`がtrueになる場合、s = trueであれば全体もtrue
  - 両方ともfalseとなる場合、sにtrue/falseのどちらを入れてもfalse
  - 両方ともtrueとなる場合、sにtrue/falseのどちらを入れてもtrue
 
