@@ -225,7 +225,48 @@ All done, have fun.
 
 　`Estimated Input: [2, 0]`に着目すると、ちゃんとSATソルバーが正解の「２」をあててくれることが分かります。
 
+## さらに、素因数分解をさせる
 
+　だから？っていう感じでしょうが、これはかなり強力な機能です。たとえば、入力を2つ読んで掛け算した結果がある数字Nでなければ無限ループするプログラムを書き、最初の入力２つを(?)にしておくと、素因数分解ができます。
+
+　注意：無茶苦茶メモリを食うので、最低32GBぐらいRAMのあるマシン以外では実行しないでください：
+
+```bash
+> cabal run create mult.bf
+** Brainfuck 2 SAT **
+...
+-- Create SAT problem --
+To CNF...
+4518175 clauses, 71314123 literals
+Aliasing...
+1232952 uniq predicates
+write to file
+All done, have fun.
+
+> minisat sat.txt ans.txt || true
+WARNING: for repeatability, setting FPU to use double precision
+...
+Memory used           : 1293.00 MB
+CPU time              : 156.7 s
+...
+SATISFIABLE
+```
+
+```bash
+> cabal run decode mult.bf
+...
+
+-- Result --
+          Input: [(?), (?)]
+Estimated Input: [3, 5]
+Estimated IDs:
+0: ID {getPC = 0, getMem = [0,0,0,0,0,0,0,0], getPT = 0, getIC = 0, getOC = 0, getOut = []}
+...
+279: ID {getPC = 49, getMem = [0,5,0,0,0,0,0,0], getPT = 2, getIC = 2, getOC = 0, getOut = []}
+All done, have fun.
+```
+
+　素因数分解は現在ではNP完全ではないと思われていますが、10年ほど前まではNP完全だと思われていました。今は素数であることの判定が
 
 ## 参考文献
 
