@@ -66,4 +66,8 @@ data Component =
  - MCは計算用中間テープカウンタ：ポインタの位置
  - InTape/MidTape/OutTape：入力・計算用中間テープ・出力テープの値
 
+　SATにはgetcharもputcharもないので、入力は事前にバイト列として（論理式に変換して）与えた上で出力も論理変数の割当てから読み取ることになります。これがInTape/OutTape論理変数の役割です。
+
+　
+
 
