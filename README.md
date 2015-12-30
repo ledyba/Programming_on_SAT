@@ -11,4 +11,4 @@
 # Available on GitBook
 
 ネット上から読む時は、githubよりも[GitBook](https://ledyba.gitbooks.io/programming-on-sat/content/)の方が読みやすいよ    
-$$ \Rightarrow $$ [https://ledyba.gitbooks.io/programming-on-sat/content/](https://ledyba.gitbooks.io/programming-on-sat/content/)
+⇒ [https://ledyba.gitbooks.io/programming-on-sat/content/](https://ledyba.gitbooks.io/programming-on-sat/content/)
