@@ -133,12 +133,18 @@ makeInc from_ to_ bitLength =
 makeDec :: (Int -> Nat) -> (Int -> Nat) -> Int -> Fml Nat
 makeDec from_ to_ bitLength =
   And (
-      -- 最下位1bit
-      And[makeNotEq (from_ 0) (to_ 0), makeNotEq (from_ 0) (TmpVar 0)]
-          :((\bidx ->
+        [And [
+            makeNotEq (from_ 0) (to_ 0),
+            makeNotEq (from_ 0) (TmpNat 0)]]
+         ++(\bidx ->
               Or [
-                And [      var $ TmpNat (bidx-1),  makeNotEq (from_ bidx) (to_ bidx), makeNotEq (from_ bidx) (TmpNat bidx)],
-                And [Not $ var $ TmpNat (bidx-1), makeEq (from_ bidx) (to_ bidx), Not $ var $ TmpNat bidx]
+                And [
+                    var $ TmpNat (bidx-1),
+                    makeNotEq (from_ bidx) (to_ bidx),
+                    makeNotEq (from_ bidx) (TmpNat bidx)],
+                And [
+                    Not $ var $ TmpNat (bidx-1),
+                    makeEq (from_ bidx) (to_ bidx),
+                    Not $ var $ TmpNat bidx]
               ]) <$> [1..bitLength-1])
-
 ```
