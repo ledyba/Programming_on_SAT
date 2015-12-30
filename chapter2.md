@@ -152,8 +152,8 @@ SAT
 
  - 左側`(p && q)`がtrueになる場合、s = falseであれば全体もtrue
  - 右側`(r)`がtrueになる場合、s = trueであれば全体もtrue
- - 両方ともfalseの場合、sにtrue/falseのどちらを入れてもfalse
- - 両方ともtrueの場合、sにtrue/falseのどちらを入れてもtrue
+ - 両方ともfalseとなる場合、sにtrue/falseのどちらを入れてもfalse
+ - 両方ともtrueとなる場合、sにtrue/falseのどちらを入れてもtrue
 
 　というわけで、元の式と変形され後の式のtrue/falseと変形後の式のtrue/falseが一致します。
 
