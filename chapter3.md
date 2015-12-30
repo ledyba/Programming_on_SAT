@@ -15,7 +15,7 @@
 
 ## ライブラリのインストール
 
-　次に、わたしの書いたSAT問題生成用ライブラリである「[Sally](https://github.com/ledyba/Sally)」をインストールをしま。
+　次に、わたしの書いたSAT問題生成用ライブラリである「[Sally](https://github.com/ledyba/Sally)」をインストールをします。
 
 ```bash
 $ git clone git@github.com:ledyba/Sally.git
