@@ -255,4 +255,5 @@ http://www.amazon.co.jp/dp/4781910270/ref=cm_sw_r_tw_dp_6O2Gwb1YRB125
 
 
 \[3\] Spy is here!
+http://quiz-tairiku.com/logic/q9.html#q45
 [3]: http://quiz-tairiku.com/logic/q9.html#q45 "Spy is here!"
