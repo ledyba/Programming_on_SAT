@@ -66,6 +66,14 @@ $ cabal install
 *Sally> toDIMACS vars dict "p.sat"
 ```
 
+　保存したので、コンソールをもう一つ開いてminisatに問題を解かせます：
+
+```bash
+$ minisat p.sat p.ans
+
+SATISFIABLE
+```
+
 ```Haskell
 *Sally> result <- fromDIMACS dict "p.ans"
 *Sally> result
