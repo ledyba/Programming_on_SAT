@@ -263,7 +263,7 @@ SATISFIABLE
 
 と「充足可能（＝論理パズルは解ける）」という回答が返ってきました。
 
-論理式の割当を見ると：
+論理式の割当てを見ると：
 
 ```bash
 $ cat puzzle.ans
@@ -271,8 +271,9 @@ SAT
 1 -2 3 -4 5 0
 ```
 
-となり、a,cはtrue、bはfalseとなりました。残りのt1,t2は
-つまり、答えは「嘘を付いているのはB」です。
+　となり、a,cはtrue、bはfalseとなりました。残りのt1,t2はCNFに変形するために用意したテンポラリ変数ですから、無視してよいのでした。
+
+　つまり、答えは「嘘を付いているのはB」です。
 
 ## 引用
 \[1\] SAT Competition 2009: Benchmark Submission Guidelines    
