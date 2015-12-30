@@ -275,6 +275,10 @@ SAT
 
 　よって、答えは「嘘を付いているのはB」です。確かに、この答えを検算してみると合ってますね。
 
+## 次は？
+
+　手動でCNFの変形をしてると頭が痛くなりそうじゃないですか？
+
 ## 引用
 \[1\] SAT Competition 2009: Benchmark Submission Guidelines    
 http://www.satcompetition.org/2009/format-benchmarks2009.html
