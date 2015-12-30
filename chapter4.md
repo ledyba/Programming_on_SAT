@@ -189,3 +189,8 @@ fromList [(OutNat 0,False),(TmpNat 0,True),(OutNat 1,False),(TmpNat 1,True),(Out
 "OutNat:"
 0
 ```
+
+
+## 次は？
+
+　Brainfuckコンパイラを実装します！
