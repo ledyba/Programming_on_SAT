@@ -11,7 +11,7 @@
 　早速、そのデータ構造を作りましょう。入力／出力の各ビットに対応する各論理変数を作ります：
 
 ```hs
-data Nat = InNat Int | OutNat Int
+data Nat = InNat Int | OutNat Int deriving (Show,Read,Ord,Eq)
 ```
 
 　InNat 0で入力する数値1ビット目を表し、InNat 1で入力する数値2ビット目を表し、…といった感じで表現します。出力も同じです。
