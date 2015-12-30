@@ -79,7 +79,8 @@ main = print (makeConst InNat 8 10)
 
 　論理式がCとI<sub>1</sub> && I<sub>2</sub>等しいこと（＝）は言い換えればどちらも真であるかどちらも偽であるかのどちらかなので、次のようにエンコーディングできます。
 
-　(C && (I<sub>1</sub> && I<sub>2</sub>)) || (!C && !(I<sub>1</sub> && I<sub>2</sub>))
+CとI<sub>1</sub> && I<sub>2</sub>が等しい　⇔  
+(C && (I<sub>1</sub> && I<sub>2</sub>)) || (!C && !(I<sub>1</sub> && I<sub>2</sub>))
 
 以下、これを(C=I<sub>1</sub> && I<sub>2</sub>)と略記します。
 
