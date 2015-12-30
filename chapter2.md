@@ -214,6 +214,24 @@ SAT
 
 となります。
 
+
+### CNFへ変形する
+
+全体の論理式は、BとCの論理式を&&で繋げればよくて、
+
+```
+((b && !a) || (!b && a)) &&
+((c && !b) || (!c && b))
+```
+
+となります。これをさらに先ほどのテクニックでCNFに変形します。
+
+```
+((b && !a) || (!b && a)) &&
+((c && !b) || (!c && b))
+```
+
+
 ## 引用
 \[1\] SAT Competition 2009: Benchmark Submission Guidelines    
 http://www.satcompetition.org/2009/format-benchmarks2009.html
