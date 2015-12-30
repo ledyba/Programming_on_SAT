@@ -72,6 +72,44 @@ p cnf 3 2
 
 　それぞれの行は節を表していて、1や-1はpや!p、2はq、3はrを表しています。同じ行に数字を並べるとそれぞれorで繋がった「節」の意味になり、節と節はそれぞれandで繋がっている事を表しています。行の最後の0は行区切りです。
 
+　さて、これをSATソルバーに解かせてみましょう。
+
+```bash
+$ minisat hello.sat hello.ans
+============================[ Problem Statistics ]=============================
+|                                                                             |
+|  Number of variables:             3                                         |
+|  Number of clauses:               1                                         |
+|  Parse time:                   0.00 s                                       |
+|  Eliminated clauses:           0.00 Mb                                      |
+|  Simplification time:          0.00 s                                       |
+|                                                                             |
+============================[ Search Statistics ]==============================
+| Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+|           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+===============================================================================
+===============================================================================
+restarts              : 1
+conflicts             : 0              (0 /sec)
+decisions             : 1              (0.00 % random) (962 /sec)
+propagations          : 1              (962 /sec)
+conflict literals     : 0              ( nan % deleted)
+Memory used           : 0.24 MB
+CPU time              : 0.00104 s
+
+SATISFIABLE
+```
+
+　というわけで「充足可能」と出ました（最後の行）。その時の論理変数の割当は、hello.ansファイルに吐き出されます。
+
+```bash
+$ cat hello.ans
+SAT
+-1 -2 3 0
+```
+
+　この意味は、p(=1)はfalse、q(=2)もfalse、r(=3)はtrueだということです。たしかに`(p || q || r) && !p`に代入してみると、trueになっています（一つ目の節はrがtrueなのでtrue、ふたつ目は!pがtrue）。
+
 　p,q,rから1,2,3への対応は自分で考えて裏でメモっておく必要があります。さらに行区切りに0を使っているので、論理変数は1から始まる必要があります（マイナス・ゼロとゼロは同じなので論理変数を表すには使えない、と覚えてもよいでしょう）。
 
 ## CNFへの変形
