@@ -222,7 +222,6 @@ SATISFIABLE
 ** Brainfuck 2 SAT **
 -- Setting --
   src:,[>++<-]>----[]
-  ast:[GetC,LoopBegin 8,PtInc,ValInc,ValInc,PtDec,ValDec,LoopEnd 2,PtInc,ValDec,ValDec,ValDec,ValDec,LoopBegin 15,LoopEnd 14]
   in: [(?), 0]
   value-bits: 8
   addr-bits:4
