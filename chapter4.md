@@ -104,8 +104,12 @@ CとI<sub>1</sub> && I<sub>2</sub>が等しい　⇔
 ```hs
 makeInc :: (Int -> Nat) -> (Int -> Nat) -> Int -> Fml Nat
 makeInc from_ to_ bitLength =
-  And $ And[makeNotEq (from_ 0) (to_ 0), makeEq (from_ 0) TmpNat (0)]
-          :((\bidx ->
+  And (And [
+          makeNotEq 
+             (from_ 0)
+             (to_ 0),
+          makeEq (from_ 0) TmpNat (0)])
+        :((\bidx ->
               Or [
                 And [
                     var $ TmpNat ((bidx-1)),
