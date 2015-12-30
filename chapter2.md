@@ -131,17 +131,9 @@ SAT
 (r && !s)
 ```
 
-　これは何でかというと、次の４通りを考えればわかります。
+　これは何でかというと、
 
-　このもっと一般的な方法は、次のように書けます。
-
-まず、
-
-```Haskell
-toCNF A = A
-toCNF A = A
-toCNF (A `AND` B) = A `AND` B
-```
+　一般の論理式を変形する方法はホップクロフト [\[2\]][2]をご覧ください。
 
 　なお、この変形は素朴に書くと非常に遅いため、今回は直接は書かずわたしの書いたライブラリを利用します。このライブラリは次のChapter3で触れます。
 
@@ -156,3 +148,8 @@ toCNF (A `AND` B) = A `AND` B
 http://www.satcompetition.org/2009/format-benchmarks2009.html
 
 [1]: http://www.satcompetition.org/2009/format-benchmarks2009.html "SAT Competition 2009: Benchmark Submission Guidelines"
+
+\[2\] オートマトン言語理論 計算論2 <第2版>, 
+ジョン・E・ホッブクロフト (著), R・モトワニ (著), J・D・ウルマン (著), 野崎 昭弘 (翻訳)
+
+[2]: http://www.amazon.co.jp/dp/4781910270/ref=cm_sw_r_tw_dp_6O2Gwb1YRB125 "オートマトン言語理論 計算論2 <第2版>"
