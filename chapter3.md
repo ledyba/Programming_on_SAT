@@ -90,10 +90,13 @@ fromList [("a",True),("b",False),("c",True)]
 　なお、論理式を作る時にvar "a"などとしていますが、この"a"の部分は他の任意のデータ構造に置き換えることができます。
 
 ```hs
+        -- StringじゃなくてもIntでもいい
 *Sally> var 1
 FVar (Var 1)
+        -- [Int]でもいい
 *Sally> var [1,2,3]
 FVar (Var [1,2,3])
+        -- Maybe Intでもいい
 *Sally> var (Just 1)
 FVar (Var (Just 1))
 ```
