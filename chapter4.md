@@ -74,8 +74,8 @@ main = print (makeConst InNat 8 10)
 
 　言い換えると、Cは繰り上がりです。
 
-### 繰り上がり
-　Cは簡単で、I<sub>1</sub> もI<sub>2</sub>も1（True）の時だけ繰り上がりが起こるのでC=I<sub>1</sub> && I<sub>2</sub>です。
+### 上1bit（繰り上がり）
+　上1bitであるCは簡単で、I<sub>1</sub> もI<sub>2</sub>も1（True）の時だけ繰り上がりが起こるのでC=I<sub>1</sub> && I<sub>2</sub>です。
 
 　論理式がCとI<sub>1</sub> && I<sub>2</sub>等しいこと（＝）は言い換えればどちらも真であるかどちらも偽であるかのどちらかなので、次のようにエンコーディングできます。
 
@@ -93,6 +93,8 @@ main = print (makeConst InNat 8 10)
 
  - I<sub>1</sub>とI<sub>2</sub>が等しく、OがFalse
  - I<sub>1</sub>とI<sub>2</sub>が異なり、OがTrue
+
+のとき、かつその時に限るので、論理式が充足される時はO=I<sub>1</sub> xor I<sub>2</sub>
 
 ## 1ビット減算器を作る
 
