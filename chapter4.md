@@ -99,7 +99,24 @@ CとI<sub>1</sub> && I<sub>2</sub>が等しい　⇔
 
 ## 1bit加算器を集めて8bit加算器を作る
 
-　
+　さて、この加算器を並べて8bitの数値に+1をする加算器を作りましょう。最下位1bitだけは繰り上がりはないことを使うとちょっと量を減らすことができますが、原理的には
+
+```hs
+makeInc :: (Int -> Nat) -> (Int -> Nat) -> Int -> Fml Nat
+makeInc from_ to_ bitLength =
+  And $ And[makeNotEq (from_ 0) (to_ 0), makeEq (from_ 0) (TmpNat (0))]
+          :((\bidx ->
+              Or [
+                And [
+                    var $ TmpNat ((bidx-1)),
+                    makeNotEq (from_ bidx) (to_ bidx), 
+                    makeEq (from_ bidx) (TmpNat bidx)],
+                And [
+                    Not $ var $ TmpNat ((bidx-1)),
+                    makeEq (from_ bidx) (to_ bidx),
+                    Not $ var $ TmpNat bidx]
+              ]) <$> [1..(bitLength-1)])
+```
 
 ## 1ビット減算器を作る
 
