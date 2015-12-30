@@ -126,6 +126,76 @@ data Component =
 
 　ホップクロフトの本ではどういう文脈でチューリングマシンをSATに変換しているかというと、「**NP完全**」の文脈です。NP完全の問題が解ける時、必ずある有限のステップ数より少ないステップでチューリングマシンが止まることが保証できるので、上記の無限ループプログラムは考えなくてよくなります。
 
+## 実際に使ってみる
+
+何はともあれ、使ってみましょう。
+
+```bash
+$ git clone git@github.com:ledyba/bf2sat.git
+$ cd bf2sat
+$ make init
+$ make simple
+cabal run create simple.bf
+Running bf2sat...
+** Brainfuck 2 SAT **
+-- Setting --
+  src:++[->++<]
+  ast:[ValInc,ValInc,LoopBegin 9,ValDec,PtInc,ValInc,ValInc,PtDec,LoopEnd 3]
+  in: [0, 0]
+  value-bits: 8
+  addr-bits:4
+  out-addr-bits:2
+  sim-steps:18
+-- Create SAT problem --
+To CNF...
+434666 clauses, 6233077 literals
+Aliasing...
+115584 uniq predicates
+write to file
+All done, have fun.
+minisat sat.txt ans.txt || true
+
+SATISFIABLE
+cabal run decode simple.bf
+Preprocessing library brainfuck2sat-0.1.0.0...
+In-place registering brainfuck2sat-0.1.0.0...
+Preprocessing executable 'bf2sat' for brainfuck2sat-0.1.0.0...
+Running bf2sat...
+** Brainfuck 2 SAT **
+-- Setting --
+  src:++[->++<]
+  ast:[ValInc,ValInc,LoopBegin 9,ValDec,PtInc,ValInc,ValInc,PtDec,LoopEnd 3]
+  in: [0, 0]
+  value-bits: 8
+  addr-bits:4
+  out-addr-bits:2
+  sim-steps:18
+-- Result --
+         Source:++[->++<]
+          Input: [0, 0]
+Estimated Input: [0, 0]
+Estimated IDs:
+0: ID {getPC = 0, getMem = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 0, getOC = 0, getOut = []}
+1: ID {getPC = 1, getMem = [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 0, getOC = 0, getOut = []}
+2: ID {getPC = 2, getMem = [2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 0, getOC = 0, getOut = []}
+3: ID {getPC = 3, getMem = [2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 0, getOC = 0, getOut = []}
+4: ID {getPC = 4, getMem = [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 0, getOC = 0, getOut = []}
+5: ID {getPC = 5, getMem = [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 0, getOC = 0, getOut = []}
+6: ID {getPC = 6, getMem = [1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 0, getOC = 0, getOut = []}
+7: ID {getPC = 7, getMem = [1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 0, getOC = 0, getOut = []}
+8: ID {getPC = 8, getMem = [1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 0, getOC = 0, getOut = []}
+9: ID {getPC = 3, getMem = [1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 0, getOC = 0, getOut = []}
+10: ID {getPC = 4, getMem = [0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 0, getOC = 0, getOut = []}
+11: ID {getPC = 5, getMem = [0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 0, getOC = 0, getOut = []}
+12: ID {getPC = 6, getMem = [0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 0, getOC = 0, getOut = []}
+13: ID {getPC = 7, getMem = [0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 0, getOC = 0, getOut = []}
+14: ID {getPC = 8, getMem = [0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 0, getOC = 0, getOut = []}
+15: ID {getPC = 9, getMem = [0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 0, getOC = 0, getOut = []}
+16: ID {getPC = 9, getMem = [0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 0, getOC = 0, getOut = []}
+17: ID {getPC = 9, getMem = [0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 0, getOC = 0, getOut = []}
+All done, have fun.
+```
+
 ## 参考文献
 
 \[1\] オートマトン言語理論 計算論2 <第2版>,    
