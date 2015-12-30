@@ -1,6 +1,6 @@
 # Available on GitBook
 
-[GitBook](https://ledyba.gitbooks.io/programming-on-sat/content/)の方が読みやすいよ
+ネット上から読む時は、githubよりも[GitBook](https://ledyba.gitbooks.io/programming-on-sat/content/)の方が読みやすいよ
 
 [https://ledyba.gitbooks.io/programming-on-sat/content/](https://ledyba.gitbooks.io/programming-on-sat/content/)
 
