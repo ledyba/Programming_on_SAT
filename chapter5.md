@@ -200,14 +200,6 @@ All done, have fun.
 
 ```bash
 % cabal run create simple-nondet.bf
-** Brainfuck 2 SAT **
--- Setting --
-  src:,[>++<-]>----[]
-  in: [(?), 0]
-  value-bits: 8
-  addr-bits:4
-  out-addr-bits:2
-  sim-steps:22
 % minisat sat.txt ans.txt || true
 ...
 SATISFIABLE
