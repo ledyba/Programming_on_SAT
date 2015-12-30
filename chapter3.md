@@ -30,7 +30,7 @@ $ cabal install
 ```Haskell
 % cabal repl
 ...(中略)...
-        -- 論理式を入力：
+            -- 論理式を入力：
 *Sally.SAT> let fml =
     And [
         Or [
@@ -84,3 +84,7 @@ fromList [("a",True),("b",False),("c",True)]
 ```
 
 　というわけで、嘘つきはBとなり、前章で手動でやった結果と同じものが得られます。
+
+## 次は？
+
+　
