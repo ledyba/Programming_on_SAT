@@ -4,7 +4,7 @@
 
 ## あなたとSATソルバー、いますぐダウンロード
 
-　なにはともあれ、SATソルバーを入手しないといけませんね。今回は[MiniSAT](http://minisat.se/)（[http://minisat.se/](http://minisat.se/)）というソフトウェアを使います。このソフトウェアはこの業界ではかなり有名で、[SAT Competition](http://www.satcompetition.org/)というSATソルバーの世界大会ではこれを改造したものがたくさん出場して
+　なにはともあれ、SATソルバーを入手しないといけませんね。今回は[MiniSAT](http://minisat.se/)（[http://minisat.se/](http://minisat.se/)）というソフトウェアを使います。このソフトウェアはこの業界ではかなり有名で、[SAT Competition](http://www.satcompetition.org/)というSATソルバーの世界大会ではこれを改造したものがたくさん出場しています。
 
 　さて、ubuntu/OSXなら以下の方法でインストールできます。
 
