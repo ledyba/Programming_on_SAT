@@ -45,4 +45,15 @@ https://copy.sh/brainfuck/
 
 　ここまでの準備があれば、もう簡単です。一番難しいのは、データ構造（＝論理変数の構成）を設計する所でしょうか？
 
-　
+```hs
+data Component =
+    PC Time Int |
+    IC Time Int |
+    InTape Int Int |
+    MC Time Int |
+    MidTape Time Int Int |
+    OC Time Int |
+    OutTape Int Int |
+    Tmp [Int]
+  deriving (Eq,Show,Read,Ord)
+```
