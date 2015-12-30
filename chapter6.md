@@ -8,3 +8,10 @@ bf2satのページには、この部分を詳しく解説したスライドへ�
   - https://github.com/ledyba/bf2sat
 - slideshare
   - http://www.slideshare.net/ledyba/brainfuck-on-sat-solver
+
+# 奥付
+
+ - ψ（プサイ）の興味関心空間
+   - http://ledyba.org/
+   - [@tikal](https://twitter.com/tikal)
+   - [github: ledyba](https://github.com/ledyba)
