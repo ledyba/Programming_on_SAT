@@ -126,7 +126,7 @@ makeInc from_ to_ bitLength =
                     Not $ var $ TmpNat (bidx-1),
                     makeEq (from_ bidx) (to_ bidx),
                     Not $ var $ TmpNat bidx]
-              ]) <$> [1..(bitLength-1)]]
+              ]) <$> [1..(bitLength-1)]])
 ```
 
 ## 減算器を作る
