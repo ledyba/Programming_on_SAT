@@ -26,7 +26,7 @@ $ brew install minisat #OSX
 
 これをSATに入力する形式にするためのファイルフォーマットである、***DIMACS形式***にすると、次のようになります。
 
-```DIMACS:
+```DIMACS
 c src/chapter2/hello.sat
 c cで始まる行はコメントです
 p cnf 3 2
