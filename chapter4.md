@@ -94,7 +94,7 @@ main = print (makeConst InNat 8 10)
  - I<sub>1</sub>とI<sub>2</sub>が等しく、OがFalse
  - I<sub>1</sub>とI<sub>2</sub>が異なり、OがTrue
 
-のとき、かつその時に限るので、論理式が充足される時はO=I<sub>1</sub> xor I<sub>2</sub>となってくれます。
+のとき、かつその時に限るので、O=I<sub>1</sub> xor I<sub>2</sub>という等式が作れたことになります。
 
 ## 1ビット減算器を作る
 
