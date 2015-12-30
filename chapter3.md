@@ -7,8 +7,8 @@
  - [Sally](https://github.com/ledyba/Sally) - a SAT instance generatior library for haskell
    - https://github.com/ledyba/Sally
 
-　えっ、Haskellかよって感じですが、
+　えっ、いままで初心者向けって感じだったのにいきなりHaskellかよ、って感じですが、一番わかりやすく書けるのがHaskellだという結論に至ったので、あなたがHaskellを書けなくても読んでみてください。
 
 ## ライブラリのインストール
-　
-　
+
+　まずはライブラリのインストールをします。まず[Haskell Platformの最新版](https://www.haskell.org/platform/)をインストールしておいてください。
