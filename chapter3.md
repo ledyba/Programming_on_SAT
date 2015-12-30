@@ -31,6 +31,8 @@ $ cabal install
 % cabal repl
 ...(中略)...
          -- 論理式を入力：
+         -- ((b && !a) || (!b && a)) &&
+         -- ((c && !b) || (!c && b))
 *Sally> let fml =
     And [
         Or [
