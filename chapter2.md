@@ -35,7 +35,7 @@ p cnf 1 1
 
 最初のcで始まる2行はコメントなので無視して、3行目から行きましょう。
 
-最初の「p cnf」は、このファイルがCNF式であることを示しています。なお、SAT Competitonのドキュメント[\[1\]][1](を読む限りでは、CNF式以外の物であることは無いみたいです。
+最初の「p cnf」は、このファイルがCNF式であることを示しています。なお、SAT Competitonのドキュメント [\[1\]][1](を読む限りでは、CNF式以外の物であることは無いみたいです。
 
 ## 引用
 \[1\] SAT Competition 2009: Benchmark Submission Guidelines
