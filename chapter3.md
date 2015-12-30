@@ -40,6 +40,16 @@ $ cabal install
             And [Not (var "c"), var "b"]]]
 *Sally> let cnf = toCNF (removeNot fml)
 *Sally> cnf
+[
+    [CAff (TmpVar [1,0,1]),CAff (Var "b")],
+    [CAff (TmpVar [1,0,1]),CNot (Var "a")],
+    [CNot (TmpVar [1,0,1]),CNot (Var "b")],
+    [CNot (TmpVar [1,0,1]),CAff (Var "a")],
+    [CAff (TmpVar [1,1,1]),CAff (Var "c")],
+    [CAff (TmpVar [1,1,1]),CNot (Var "b")],
+    [CNot (TmpVar [1,1,1]),CNot (Var "c")],
+    [CNot (TmpVar [1,1,1]),CAff (Var "b")]
+]
 *Sally> let (vars,dict) = makeAlias cnf
 *Sally> toDIMACS vars dict "p.sat"
 ```
