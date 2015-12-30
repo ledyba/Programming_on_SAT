@@ -39,6 +39,7 @@ $ cabal install
             And [var "c", Not (var "b")],
             And [Not (var "c"), var "b"]]]
 *Sally> let cnf = toCNF (removeNot fml)
+*Sally> cnf
 *Sally> let (vars,dict) = makeAlias cnf
 *Sally> toDIMACS vars dict "p.sat"
 ```
