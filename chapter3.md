@@ -11,4 +11,8 @@
 
 ## ライブラリのインストール
 
-　まずはライブラリのインストールをします。まず[Haskell Platformの最新版](https://www.haskell.org/platform/)をインストールしておいてください。
+　まずはライブラリをインストールをします。まず[Haskell Platformの最新版](https://www.haskell.org/platform/)をインストールしておいてください。
+
+```bash
+$ git clone git@github.com:ledyba/Sally.git
+```
