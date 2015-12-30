@@ -148,3 +148,6 @@ makeDec from_ to_ bitLength =
                     Not $ var $ TmpNat bidx]
               ]) <$> [1..bitLength-1])
 ```
+
+## 結果を確かめる
+
