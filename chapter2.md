@@ -108,6 +108,8 @@ toCNF (A `AND` B) = A `AND` B
 
 　なお、この変形は素朴に書くと非常に遅いため、今回は直接は書かずわたしの書いたライブラリを利用します。このライブラリは次のChapter3で触れます。
 
+##論理パズルを解いてみよう
+
 ## 引用
 \[1\] SAT Competition 2009: Benchmark Submission Guidelines
 http://www.satcompetition.org/2009/format-benchmarks2009.html
