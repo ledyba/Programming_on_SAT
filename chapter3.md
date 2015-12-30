@@ -4,7 +4,7 @@
 
 　そこで、わたしはライブラリを書きました。Haskell製です。
 
- - Sally - a SAT instance generatior library for haskell
+ - [Sally](https://github.com/ledyba/Sally) - a SAT instance generatior library for haskell
    - https://github.com/ledyba/Sally
 
 　
