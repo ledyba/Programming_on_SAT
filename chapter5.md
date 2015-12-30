@@ -223,7 +223,9 @@ Estimated IDs:
 All done, have fun.
 ```
 
-　
+　`Estimated Input: [2, 0]`に着目すると、ちゃんとSATソルバーが正解の「２」をあててくれることが分かります。
+
+
 
 ## 参考文献
 
