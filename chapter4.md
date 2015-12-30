@@ -80,7 +80,7 @@ main = print (makeConst InNat 8 10)
 
 　(C && (I<sub>1</sub> && I<sub>2</sub>)) || (!C && !(I<sub>1</sub> && I<sub>2</sub>))
 
-以下、これを
+以下、これを(C=I<sub>1</sub> && I<sub>2</sub>)と略記します。
 
 ## 1ビット減算器を作る
 
