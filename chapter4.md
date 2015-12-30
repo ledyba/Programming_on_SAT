@@ -110,11 +110,11 @@ makeInc :: (Int -> Nat) -> (Int -> Nat) -> Int -> Fml Nat
 makeInc from_ to_ bitLength =
   And (
         -- 最下位bit
-        And [
+        [And [
           makeNotEq 
              (from_ 0)
              (to_ 0),
-          makeEq (from_ 0) (TmpNat 0)])
+          makeEq (from_ 0) (TmpNat 0)])]
         -- 上位bit
         ++[(\bidx ->
               Or [
@@ -136,7 +136,7 @@ makeInc from_ to_ bitLength =
 ```hs
 makeDec :: (Int -> Nat) -> (Int -> Nat) -> Int -> Fml Nat
 makeDec from_ to_ bitLength =
-  And [
+  And (
       -- 最下位1bit
       And[makeNotEq (from_ 0) (to_ 0), makeNotEq (from_ 0) (TmpVar 0)]
           :((\bidx ->
