@@ -44,6 +44,7 @@ And [
 　一般の数値に対して論理式を組み立てるためには、定数を２進数に変換してから同じことをすればOKです。
 
 ```hs
+-- 最初の引数にはInNatかOutNatを渡せるようについでに一般化もした
 makeConst :: (Int -> Nat) -> Int -> Int -> Fml Nat
 makeConst type_ bitLength value =
       And $
