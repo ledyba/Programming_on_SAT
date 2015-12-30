@@ -85,7 +85,14 @@ main = print (makeConst InNat 8 10)
 
 ### 下1bit
 
-　下1bitは結構面倒です。２進数の足し算では2で桁が繰り上がるので、
+　下1bitは結構面倒です。I<sub>1</sub>と I<sub>2</sub>の組み合わせを調べると、I<sub>1</sub>とI<sub>2</sub>のどちらか片方だけが真の時だけOは真になります。これはいわゆるxor演算ですが、これをそのまま実装すると少し長くなるので、今回は次のように実装しました。
+
+　((I<sub>1</sub> = I<sub>2</sub>) && !O) || (!(I<sub>1</sub> = I<sub>2</sub>) && O)
+
+ I<sub>1</sub>と I<sub>2</sub>をそれぞれ代入すると、この論理式がTrueになるのは
+
+ - I<sub>1</sub>とI<sub>2</sub>が等しく、OがFalse
+ - I<sub>1</sub>とI<sub>2</sub>が異なり、OがTrue
 
 ## 1ビット減算器を作る
 
