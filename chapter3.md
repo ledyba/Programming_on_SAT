@@ -22,3 +22,7 @@ $ git clone git@github.com:ledyba/Sally.git
 $ cd Sally
 $ cabal install
 ```
+
+## ライブラリの使い方
+
+　
