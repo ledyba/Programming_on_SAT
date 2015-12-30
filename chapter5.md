@@ -120,6 +120,7 @@ data Component =
 $ git clone git@github.com:ledyba/bf2sat.git
 $ cd bf2sat
 $ make init
+
 % cabal run create simple.bf
 ** Brainfuck 2 SAT **
 -- Setting --
@@ -136,18 +137,13 @@ Aliasing...
 115584 uniq predicates
 write to file
 All done, have fun.
+
 % minisat sat.txt ans.txt || true
 ...
 SATISFIABLE
-cabal run decode simple.bf
+
+% cabal run decode simple.bf
 ** Brainfuck 2 SAT **
--- Setting --
-  src:++[->++<]
-  in: [0, 0]
-  value-bits: 8
-  addr-bits:4
-  out-addr-bits:2
-  sim-steps:18
 -- Result --
          Source:++[->++<]
           Input: [0, 0]
