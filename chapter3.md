@@ -41,6 +41,7 @@ $ cabal install
             And [Not (var "c"), var "b"]]]
         -- CNFへ変換します：
 *Sally> let cnf = toCNF (removeNot fml)
+        -- CNFへの変換結果：
 *Sally> cnf
 [
     [CAff (TmpVar [1,0,1]),CAff (Var "b")],
@@ -52,7 +53,15 @@ $ cabal install
     [CNot (TmpVar [1,1,1]),CNot (Var "c")],
     [CNot (TmpVar [1,1,1]),CAff (Var "b")]
 ]
+```
+
+　TmpVarというのがCNFへ変換したときの追加の論理変数で、よく見比べると前章と同じ結果になっています。
+
+　ここから更に、論理変数に1,2,3...と番号を振った上でファイルへ保存します
+```Haskell
+        -- 番号を振る
 *Sally> let (vars,dict) = makeAlias cnf
+        -- DIMACS形式でファイルに保存
 *Sally> toDIMACS vars dict "p.sat"
 ```
 
