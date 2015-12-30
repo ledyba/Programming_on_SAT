@@ -37,6 +37,8 @@ p cnf 1 1
 
 最初の「p cnf」は、このファイルがCNF式であることを示しています。なお、SAT Competitonのドキュメント [\[1\]][1](を読む限りでは、CNF式以外の物であることは無いみたいです。
 
+
+
 ## 引用
 \[1\] SAT Competition 2009: Benchmark Submission Guidelines
 http://www.satcompetition.org/2009/format-benchmarks2009.html
