@@ -248,6 +248,9 @@ All done, have fun.
 > cabal run decode mult.bf
 ...
 -- Result --
+         Source: ,>,<
+[>[>+>+<<-]>>[<<+>>-]<<<-]
+>>---------------[]
           Input: [(?), (?)]
 Estimated Input: [3, 5]
 Estimated IDs:
@@ -256,6 +259,8 @@ Estimated IDs:
 279: ID {getPC = 49, getMem = [0,5,0,0,0,0,0,0], getPT = 2, getIC = 2, getOC = 0, getOut = []}
 All done, have fun.
 ```
+
+　このプログラムは、入力を2つ読んで掛け算して、結果が15でなければ[]で無限ループするプログラムです。
 
 　素因数分解は現在ではNP完全ではないと思われていますが、10年ほど前まではNP完全だと思われていました。今は素数であることの判定が
 
