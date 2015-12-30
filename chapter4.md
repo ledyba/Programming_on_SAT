@@ -114,8 +114,14 @@ makeInc from_ to_ bitLength =
             makeEq (from_ 0) (TmpNat 0)]]
           ++ (\bidx ->
               Or [
-                And [      var $ TmpNat (bidx-1),  makeNotEq (from_ bidx) (to_ bidx), makeEq (from_ bidx) (TmpNat bidx)],
-                And [Not $ var $ TmpNat (bidx-1), makeEq (from_ bidx) (to_ bidx), Not $ var $ TmpNat bidx]
+                And [
+                    var $ TmpNat (bidx-1),
+                    makeNotEq (from_ bidx) (to_ bidx),
+                    makeEq (from_ bidx) (TmpNat bidx)],
+                And [
+                    Not $ var $ TmpNat (bidx-1),
+                    makeEq (from_ bidx) (to_ bidx),
+                    Not $ var $ TmpNat bidx]
               ]) <$> [1..(bitLength-1)])
 ```
 
