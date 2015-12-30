@@ -203,24 +203,18 @@ All done, have fun.
 
 　するとどうなるか。SATのソルバーが全力で「無限ループしないような結果」を返してくれます！
 
+　次に実行するBrainfuckプログラムは、入力テープの最初の1バイト目が2でないと最後の[]で無限ループになるように仕込んでいます。
+
 ```bash
 % make simple-nondet
 ** Brainfuck 2 SAT **
 -- Setting --
   src:,[>++<-]>----[]
-  ast:[GetC,LoopBegin 8,PtInc,ValInc,ValInc,PtDec,ValDec,LoopEnd 2,PtInc,ValDec,ValDec,ValDec,ValDec,LoopBegin 15,LoopEnd 14]
   in: [(?), 0]
   value-bits: 8
   addr-bits:4
   out-addr-bits:2
   sim-steps:22
--- Create SAT problem --
-To CNF...
-978814 clauses, 18097103 literals
-Aliasing...
-256749 uniq predicates
-write to file
-All done, have fun.
 minisat sat.txt ans.txt || true
 ...
 SATISFIABLE
@@ -243,32 +237,11 @@ Running bf2sat...
           Input: [(?), 0]
 Estimated Input: [2, 0]
 Estimated IDs:
-0: ID {getPC = 0, getMem = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 0, getOC = 0, getOut = []}
-1: ID {getPC = 1, getMem = [2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 1, getOC = 0, getOut = []}
-2: ID {getPC = 2, getMem = [2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 1, getOC = 0, getOut = []}
-3: ID {getPC = 3, getMem = [2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 1, getOC = 0, getOut = []}
-4: ID {getPC = 4, getMem = [2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 1, getOC = 0, getOut = []}
-5: ID {getPC = 5, getMem = [2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 1, getOC = 0, getOut = []}
-6: ID {getPC = 6, getMem = [2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 1, getOC = 0, getOut = []}
-7: ID {getPC = 7, getMem = [1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 1, getOC = 0, getOut = []}
-8: ID {getPC = 2, getMem = [1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 1, getOC = 0, getOut = []}
-9: ID {getPC = 3, getMem = [1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 1, getOC = 0, getOut = []}
-10: ID {getPC = 4, getMem = [1,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 1, getOC = 0, getOut = []}
-11: ID {getPC = 5, getMem = [1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 1, getOC = 0, getOut = []}
-12: ID {getPC = 6, getMem = [1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 1, getOC = 0, getOut = []}
-13: ID {getPC = 7, getMem = [0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 1, getOC = 0, getOut = []}
-14: ID {getPC = 8, getMem = [0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 1, getOC = 0, getOut = []}
-15: ID {getPC = 9, getMem = [0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 1, getOC = 0, getOut = []}
-16: ID {getPC = 10, getMem = [0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 1, getOC = 0, getOut = []}
-17: ID {getPC = 11, getMem = [0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 1, getOC = 0, getOut = []}
-18: ID {getPC = 12, getMem = [0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 1, getOC = 0, getOut = []}
-19: ID {getPC = 13, getMem = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 1, getOC = 0, getOut = []}
-20: ID {getPC = 15, getMem = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 1, getOC = 0, getOut = []}
+0: ID {getPC = 0, getMem = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 0, getIC = 0, 
+...(略)...
 21: ID {getPC = 15, getMem = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], getPT = 1, getIC = 1, getOC = 0, getOut = []}
 All done, have fun.
 ```
-
-　このBrainfuckプログラムは、入力テープの最初の1バイト目が2でないと最後の[]で無限ループになるように仕込んでいます。
 
 　
 
