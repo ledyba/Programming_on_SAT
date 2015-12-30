@@ -48,7 +48,10 @@ And [
 makeConst :: (Int -> Nat) -> Int -> Int -> Fml Nat
 makeConst type_ bitLength value =
       And $
-        fmap (\(bi,b) -> if b then (FVar (Var (type_ bi))) else Not (FVar (Var (type_ bi))))
+        fmap (\(bi,b) ->
+            if b
+                then (FVar (Var (type_ bi)))
+                else Not (FVar (Var (type_ bi))))
         (zip [0..] (toBitList bitLength value))
 
  -- 8ビットで定数「10」を表す論理式を作る
