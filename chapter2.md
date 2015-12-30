@@ -24,6 +24,12 @@ $ brew install minisat #OSX
  p || !p //pがｔでもfでもこの式はtrueになる
 ```
 
-これをSATに入力する形式にすると、
+これをSATに入力する形式にすると、次のようになります。
+
+```DIMACS:src/chapter2/hello.sat
+p cnf 1 1
+1 -1 0
+```
+
 
 
