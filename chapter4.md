@@ -109,7 +109,7 @@ makeInc from_ to_ bitLength =
              (from_ 0)
              (to_ 0),
           makeEq (from_ 0) TmpNat (0)])
-        :((\bidx ->
+        ++[(\bidx ->
               Or [
                 And [
                     var $ TmpNat ((bidx-1)),
@@ -119,7 +119,7 @@ makeInc from_ to_ bitLength =
                     Not $ var $ TmpNat ((bidx-1)),
                     makeEq (from_ bidx) (to_ bidx),
                     Not $ var $ TmpNat bidx]
-              ]) <$> [1..(bitLength-1)])
+              ]) <$> [1..(bitLength-1)]]
 ```
 
 ## 1ビット減算器を作る
