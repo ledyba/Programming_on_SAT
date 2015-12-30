@@ -4,9 +4,11 @@
 
 ## 5秒でおさらいBrainfuck
 
-　Brainfuckはたった8文字だけで記述するプログラミング言語です。[Wikipediaから引用](https://ja.wikipedia.org/wiki/Brainfuck)：
+　Brainfuckはたった8文字だけで記述するプログラミング言語です。
 
-　Brainfuckにはメモリの概念と今現在どこを指しているかのポインタの概念があり、次の8文字（命令）を使ってそのメモリとポインタを操作します：
+　Brainfuckにはメモリの概念と今現在どこを指しているかのポインタの概念があり、次の8文字（命令）を使ってそのメモリとポインタを操作します。
+
+　[Wikipediaから引用](https://ja.wikipedia.org/wiki/Brainfuck)：
 
  - ">" ポインタをインクリメントする。
    - ポインタをptrとすると、C言語の「ptr++;」に相当する。
