@@ -25,7 +25,7 @@ $ cabal install
 
 ## ライブラリの使い方
 
-　cabal replとタイプするとreplモードで使えるので、前章の論理パズルをこのライブラリで解いてみましょう。
+　cabal replとタイプするとreplモードで使えるので、前章の論理パズルをこのライブラリで解いてみましょう。まず、論理式を（Haskellで）入力して、CNFへ変換します。
 
 ```Haskell
 % cabal repl
