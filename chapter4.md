@@ -11,7 +11,7 @@
 　早速、そのデータ構造を作りましょう。入力／出力の各ビットに対応する各論理変数を作ります：
 
 ```hs
-data Nat = InNat Int | OutNat Int deriving (Show,Read,Ord,Eq)
+data Nat = InNat Int | OutNat Int | TmpNat deriving (Show,Read,Ord,Eq)
 ```
 
 　論理変数`InNat 0`で入力する数値1ビット目を表し、論理変数`InNat 1`で入力する数値2ビット目を表し、…といった感じで表現します。出力も同じです。
@@ -61,7 +61,7 @@ makeConst type_ bitLength value =
 main = print (makeConst InNat 8 10)
 ```
 
-## 1ビット加算器を作る
+## 1bit加算器を作る
 
 　さて、定数は表せたので、足し算を考えていきましょう。最初に書いたとおり、+1だけ考えます。足し算といえば、論理回路です。というわけで、まずは２進数１桁ぶんの足し算をする回路を作ります：
 
@@ -95,6 +95,10 @@ main = print (makeConst InNat 8 10)
  - I<sub>1</sub>とI<sub>2</sub>が異なり、OがTrue
 
 のとき、かつその時に限るので、O=I<sub>1</sub> xor I<sub>2</sub>という等式が表現できたことになります。
+
+## 1bit加算器を集めて8bit加算器を作る
+
+
 
 ## 1ビット減算器を作る
 
