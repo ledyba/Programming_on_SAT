@@ -30,6 +30,7 @@ $ cabal install
 ```Haskell
 % cabal repl
 ...(中略)...
+        -- 論理式を入力：
 *Sally.SAT> let fml =
     And [
         Or [
