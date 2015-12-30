@@ -110,6 +110,10 @@ toCNF (A `AND` B) = A `AND` B
 
 ##論理パズルを解いてみよう
 
+　ここまででSATソルバーの使い方を完全に伝授できたので、ためしに一つ簡単な論理パズルを解いてみましょう。
+
+　
+
 ## 引用
 \[1\] SAT Competition 2009: Benchmark Submission Guidelines
 http://www.satcompetition.org/2009/format-benchmarks2009.html
