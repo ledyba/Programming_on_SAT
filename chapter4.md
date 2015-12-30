@@ -72,8 +72,9 @@ main = print (makeConst InNat 8 10)
    - O=I<sub>1</sub> + I<sub>2</sub>の下1bit
    - C=I<sub>1</sub> + I<sub>2</sub>の上1bit
 
-　言い換えると、Oは足し算の結果でCは繰り上がりです。
+　言い換えると、Cは繰り上がりです。
 
+### 繰り上がり
 　Cは簡単で、I<sub>1</sub> もI<sub>2</sub>も1（True）の時だけ繰り上がりが起こるのでC=I<sub>1</sub> && I<sub>2</sub>です。
 
 　論理式がCとI<sub>1</sub> && I<sub>2</sub>等しいこと（＝）は言い換えればどちらも真であるかどちらも偽であるかのどちらかなので、次のようにエンコーディングできます。
@@ -81,6 +82,10 @@ main = print (makeConst InNat 8 10)
 　(C && (I<sub>1</sub> && I<sub>2</sub>)) || (!C && !(I<sub>1</sub> && I<sub>2</sub>))
 
 以下、これを(C=I<sub>1</sub> && I<sub>2</sub>)と略記します。
+
+### 足し算の結果
+
+　は結構面倒です。
 
 ## 1ビット減算器を作る
 
