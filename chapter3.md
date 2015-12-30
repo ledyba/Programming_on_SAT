@@ -38,6 +38,7 @@ $ cabal install
         Or [
             And [var "c", Not (var "b")],
             And [Not (var "c"), var "b"]]]
+        -- CNFへ変換します：
 *Sally> let cnf = toCNF (removeNot fml)
 *Sally> cnf
 [
