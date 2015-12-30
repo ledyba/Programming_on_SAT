@@ -151,3 +151,29 @@ makeDec from_ to_ bitLength =
 
 ## 結果を確かめる
 
+実際に足し算をして結果を確かめてみます。上記の内容を実装したファイルがsrc/chapter4/sample.hsにあります。
+
+```bash
+ % runhaskell src/chapter4/sample.hs
+"write to p.sat"
+```
+
+　問題がp.satに出力されていますが、このあたりからだんだんと人間の手に負えなくなってきます（ので省略）。
+
+　これをminisatに投げて充足問題を解いてもらい、結果を復元します：
+
+```bash
+% minisat p.sat p.ans
+...
+
+SATISFIABLE
+
+% runhaskell src/chapter4/sample.hs read
+"Variables: "
+fromList [(OutNat 0,False),(TmpNat 0,True),(OutNat 1,False),(TmpNat 1,True),(OutNat 2,True),(TmpNat 2,False),(InNat 0,True),(OutNat 3,True),(TmpNat 3,False),(InNat 1,True),(OutNat 4,False),(TmpNat 4,False),(InNat 2,False),(OutNat 5,False),(TmpNat 5,False),(InNat 3,True),(OutNat 6,False),(TmpNat 6,False),(InNat 4,False),(OutNat 7,False),(TmpNat 7,False),(InNat 5,False),(InNat 6,False),(InNat 7,False)]
+"InNat:"
+11
+"OutNat:"
+12
+```
+
