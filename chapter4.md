@@ -114,16 +114,16 @@ makeInc from_ to_ bitLength =
           makeNotEq 
              (from_ 0)
              (to_ 0),
-          makeEq (from_ 0) TmpNat (0)])
+          makeEq (from_ 0) (TmpNat 0)])
         -- 上位bit
         ++[(\bidx ->
               Or [
                 And [
-                    var $ TmpNat ((bidx-1)),
+                    var $ TmpNat (bidx-1),
                     makeNotEq (from_ bidx) (to_ bidx), 
                     makeEq (from_ bidx) (TmpNat bidx)],
                 And [
-                    Not $ var $ TmpNat ((bidx-1)),
+                    Not $ var $ TmpNat (bidx-1),
                     makeEq (from_ bidx) (to_ bidx),
                     Not $ var $ TmpNat bidx]
               ]) <$> [1..(bitLength-1)]]
@@ -131,8 +131,18 @@ makeInc from_ to_ bitLength =
 
 ## 減算器を作る
 
-　加算器と同じなのでほとんど省略します。違う所は、加算器だと繰り上がりだったところが繰り下がりになること、
+　加算器と同じなのでほとんど省略します。違う所は、加算器だと繰り上がりだったところが繰り下がりになることぐらいでしょうか。
 
- - O=!(I<sub>1</sub> = I<sub>2</sub>)
- - C=I<sub>1</sub> && I<sub>2</sub>
+```hs
+makeDec :: (Int -> Nat) -> (Int -> Nat) -> Int -> Fml Nat
+makeDec from_ to_ bitLength =
+  And [
+      -- 最下位1bit
+      And[makeNotEq (from_ 0) (to_ 0), makeNotEq (from_ 0) (TmpVar 0)]
+          :((\bidx ->
+              Or [
+                And [      var $ TmpNat (bidx-1),  makeNotEq (from_ bidx) (to_ bidx), makeNotEq (from_ bidx) (TmpNat bidx)],
+                And [Not $ var $ TmpNat (bidx-1), makeEq (from_ bidx) (to_ bidx), Not $ var $ TmpNat bidx]
+              ]) <$> [1..bitLength-1])
 
+```
