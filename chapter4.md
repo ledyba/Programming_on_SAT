@@ -98,7 +98,7 @@ main = print (makeConst InNat 8 10)
 
 ## 1bit加算器を集めて8bit加算器を作る
 
-
+　
 
 ## 1ビット減算器を作る
 
