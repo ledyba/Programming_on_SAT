@@ -41,9 +41,7 @@ q || ((!q && r) && r); //yes. q = true。
 　あとの２つは、論理式をtrueにする論理変数の割当ての組み合わせがたくさん存在します。たとえば、４つめのq || rはqがtrueならrはtrueでもfalseでも構いません（orですから）。こういう時は、SATソルバーはそのうちの組み合わせのどれか一つを返します。つまり、
 　
 ```c++
-p = true; q = true;
-p = false; q = true;
-p = true; q = false;
+(p,q) = (true,true) or (false,true) or (true,false)
 ```
 
 のうちのどれかです。
