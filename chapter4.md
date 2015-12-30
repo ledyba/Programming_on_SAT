@@ -71,6 +71,8 @@ main = print (makeConst InNat 8 10)
    - O=I<sub>1</sub> + I<sub>2</sub>の下1bit
    - C=I<sub>1</sub> + I<sub>2</sub>の上1bit
 
+Oは足し算の結果で、Cは繰り上がりです。
+
 ## 1ビット減算器を作る
 
 　
