@@ -1,0 +1,4 @@
+c src/chapter2/hello.sat
+c cで始まる行はコメントです
+p cnf 1 1
+1 -1 0
