@@ -27,6 +27,26 @@ $ cabal install
 
 　cabal replとタイプするとreplモードで使えるので、前章の論理パズルをこのライブラリで解いてみましょう。
 
+```Haskell
+% cabal repl
+...(中略)...
+*Sally.SAT> let fml =
+    And [
+        Or [
+            And [var "b", Not (var "a")],
+            And [Not (var "b"), var "a"]],
+        Or [
+            And [var "c", Not (var "b")],
+            And [Not (var "c"), var "b"]]]
+*Sally> let cnf = toCNF (removeNot fml)
+*Sally> let (vars,dict) = makeAlias cnf
+*Sally> toDIMACS vars dict "p.sat"
 ```
 
+```Haskell
+*Sally> r <- readFile "p.ans"
+*Sally> let result = fromDIMACS dict r
+*Sally> result
+fromList [("a",True),("b",False),("c",True)]
+*Sally>
 ```
