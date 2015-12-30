@@ -24,9 +24,19 @@ data Nat = InNat Int | OutNat Int deriving (Show,Read,Ord,Eq)
 
 　そのためにはどうすればよいか。SATソルバーで問題をとく時の常套手段、というか唯一の方法ですが、「狙った答えになる時だけ論理式が充足されるように」論理式を作ります。定数の場合は簡単で、なって欲しい定数の時だけ真となる論理式を作ります。
 
-　例えば、
+　例えば、0b00000000(0が8コ)の時は、InNat 0からInNat 7まですべてfalseとなるように論理式を組み立てます。つまり、それぞれの論理変数すべての否定をAndでつなげた論理式を作ります。
 
 ```haskell
-
+*Sally> And (fmap (\n -> Not(var (InNat n))) [0..7])
+And [
+    Not (FVar (Var (InNat 0))),
+    Not (FVar (Var (InNat 1))),
+    Not (FVar (Var (InNat 2))),
+    Not (FVar (Var (InNat 3))),
+    Not (FVar (Var (InNat 4))),
+    Not (FVar (Var (InNat 5))),
+    Not (FVar (Var (InNat 6))),
+    Not (FVar (Var (InNat 7)))]
 ```
+
 　
