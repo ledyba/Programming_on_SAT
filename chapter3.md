@@ -55,9 +55,9 @@ $ cabal install
 ]
 ```
 
-　TmpVarというのがCNFへ変換したときの追加の論理変数で、よく見比べると前章と同じ結果になっています。
+　TmpVarというのがCNFへ変換したときの追加の論理変数で、よく見比べると前章と同じ結果になっています（CAffとなっている方がそのままで、CNotと付いているほうが否定です）。
 
-　ここから更に、論理変数に1,2,3...と番号を振った上でファイルへ保存します
+　ここから更に、論理変数に1,2,3...と番号を振った上でファイルへ保存します：
 
 ```Haskell
         -- 番号を振る
@@ -70,9 +70,11 @@ $ cabal install
 
 ```bash
 $ minisat p.sat p.ans
-
+...
 SATISFIABLE
 ```
+
+　問題が解けたので、もう一度Sallyのコンソールへ戻り、この結果を確認します：
 
 ```Haskell
 *Sally> result <- fromDIMACS dict "p.ans"
@@ -80,3 +82,5 @@ SATISFIABLE
 fromList [("a",True),("b",False),("c",True)]
 *Sally>
 ```
+
+　というわけで、嘘つきはBです。
