@@ -206,7 +206,7 @@ All done, have fun.
 　次に実行するBrainfuckプログラムは、入力テープの最初の1バイト目が2でないと最後の[]で無限ループになるように仕込んでいます。
 
 ```bash
-% make simple-nondet
+% cabal run create simple-nondet.bf
 ** Brainfuck 2 SAT **
 -- Setting --
   src:,[>++<-]>----[]
