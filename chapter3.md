@@ -9,10 +9,16 @@
 
 　えっ、いままで初心者向けって感じだったのにいきなりHaskellかよ、って感じですが、一番わかりやすく書けるのがHaskellだという結論に至ったので、あなたがHaskellを書けなくても読んでみてください。
 
+## Haskellをインストール
+
+　まず[Haskell Platformの最新版](https://www.haskell.org/platform/)([https://www.haskell.org/platform/](https://www.haskell.org/platform/))をインストールしておいてください。インストーラーに沿うだけなのでとくに解説しません。
+
 ## ライブラリのインストール
 
-　まずはライブラリをインストールをします。まず[Haskell Platformの最新版](https://www.haskell.org/platform/)をインストールしておいてください。
+　次に、わたしの書いたSAT問題生成用ライブラリである「[Sally](https://github.com/ledyba/Sally)」をインストールをしま。
 
 ```bash
 $ git clone git@github.com:ledyba/Sally.git
+$ cd Sally
+$ cabal install
 ```
