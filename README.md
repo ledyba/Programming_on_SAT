@@ -1,9 +1,3 @@
-# Available on GitBook
-
-ネット上から読む時は、githubよりも[GitBook](https://ledyba.gitbooks.io/programming-on-sat/content/)の方が読みやすいよ
-
-[https://ledyba.gitbooks.io/programming-on-sat/content/](https://ledyba.gitbooks.io/programming-on-sat/content/)
-
 # Programming on SAT
 
 　この本は、論理式の充足性判定を超高速に行うSATソルバーの能力だけを使って様々なプログラミングを行う本です。
@@ -13,3 +7,9 @@
 　「論理式だけで何でも問題を表す」、と聞くと単なる曲芸プログラミングだと思われがちですが、その中には様々なプログラミングテクニックと情報科学の実例が詰まっています。
 
 　あなたが、SATソルバーライフをきっと楽しめますように。
+
+# Available on GitBook
+
+ネット上から読む時は、githubよりも[GitBook](https://ledyba.gitbooks.io/programming-on-sat/content/)の方が読みやすいよ
+
+[https://ledyba.gitbooks.io/programming-on-sat/content/](https://ledyba.gitbooks.io/programming-on-sat/content/)
