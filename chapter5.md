@@ -229,7 +229,8 @@ All done, have fun.
 
 　だから？っていう感じでしょうが、これはかなり強力な機能です。たとえば、入力を2つ読んで掛け算した結果がある数字Nでなければ無限ループするプログラムを書き、最初の入力２つを(?)にしておくと、素因数分解ができます。
 
-　注意：無茶苦茶メモリを食うので、最低32GBぐらいRAMのあるマシン以外では実行しないでください：
+　**注意**  
+　以下のコマンドは無茶苦茶メモリを食うので、最低32GBぐらいRAMのあるマシン以外では実行しないでください：
 
 ```bash
 > cabal run create mult.bf
@@ -250,12 +251,9 @@ Memory used           : 1293.00 MB
 CPU time              : 156.7 s
 ...
 SATISFIABLE
-```
 
-```bash
 > cabal run decode mult.bf
 ...
-
 -- Result --
           Input: [(?), (?)]
 Estimated Input: [3, 5]
