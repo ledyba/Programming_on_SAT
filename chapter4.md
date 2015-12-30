@@ -83,9 +83,9 @@ main = print (makeConst InNat 8 10)
 
 以下、これを(C=I<sub>1</sub> && I<sub>2</sub>)と略記します。
 
-### 足し算の結果
+### 下1bit
 
-　は結構面倒です。
+　下1bitは結構面倒です。
 
 ## 1ビット減算器を作る
 
