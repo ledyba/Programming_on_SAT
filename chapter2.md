@@ -261,7 +261,7 @@ CPU time              : 0.001207 s
 SATISFIABLE
 ```
 
-となり、答えを見ると：
+と「充足可能（＝論理パズルは解ける）」、答えを見ると：
 
 ```bash
 $ cat puzzle.ans
@@ -269,7 +269,7 @@ SAT
 1 -2 3 -4 5 0
 ```
 
-
+となりました。
 
 ## 引用
 \[1\] SAT Competition 2009: Benchmark Submission Guidelines    
