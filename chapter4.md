@@ -42,7 +42,17 @@ And [
 　この組み立て方のキモは、「Andで繋がれた条件はすべてTrueになる時かつその時に限り論理式が充足されること」です。
 
 　一般の数値に対して論理式を組み立てるためには、定数を２進数に変換してから同じことをすればOKです。
-　
+
+```hs
+makeConst :: (Int -> Nat) -> Int -> Int -> Fml Nat
+makeConst type_ bitLength value =
+      And $
+        fmap (\(bi,b) -> if b then (FVar (Var (type_ bi))) else Not (FVar (Var (type_ bi))))
+        (zip [0..] (toBitList bitLength value))
+
+ -- 8ビットで定数「10」を表す論理式を作る
+main = print (makeConst InNat 8 10)
+```
 
 ## 1ビット全加算器を作る
 
