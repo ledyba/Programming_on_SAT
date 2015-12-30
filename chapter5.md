@@ -244,14 +244,7 @@ Aliasing...
 write to file
 All done, have fun.
 
-> minisat sat.txt ans.txt || true
-WARNING: for repeatability, setting FPU to use double precision
-...
-Memory used           : 1293.00 MB
-CPU time              : 156.7 s
-...
-SATISFIABLE
-
+> minisat sat.txt ans.txt
 > cabal run decode mult.bf
 ...
 -- Result --
