@@ -6,3 +6,5 @@ bf2satのページには、この部分を詳しく解説したスライドへ�
 
 - ledyba/bf2sat 
   - https://github.com/ledyba/bf2sat
+- slideshare
+  - http://www.slideshare.net/ledyba/brainfuck-on-sat-solver
