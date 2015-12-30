@@ -44,8 +44,7 @@ $ cabal install
 ```
 
 ```Haskell
-*Sally> r <- readFile "p.ans"
-*Sally> let result = fromDIMACS dict r
+*Sally> let result = fromDIMACS dict "p.ans"
 *Sally> result
 fromList [("a",True),("b",False),("c",True)]
 *Sally>
