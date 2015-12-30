@@ -151,7 +151,7 @@ makeDec from_ to_ bitLength =
 
 ## 結果を確かめる
 
-実際に足し算をして結果を確かめてみます。上記の内容を実装したファイルがsrc/chapter4/sample.hsにあります。
+実際に足し算をして結果を確かめてみます。上記の内容を実装したファイルがsrc/chapter4/sample.hsにあります。ここでは、11+1を計算させます（意味はありません）。
 
 ```bash
  % runhaskell src/chapter4/sample.hs
@@ -177,3 +177,15 @@ fromList [(OutNat 0,False),(TmpNat 0,True),(OutNat 1,False),(TmpNat 1,True),(Out
 12
 ```
 
+というわけで、11の次は12になるのでした。
+
+なお、8bitで表しきれないときは通常のコンピュータと同様にオーバーフローします：
+
+```bash
+% runhaskell src/chapter4/sample.hs read
+
+"InNat:"
+255
+"OutNat:"
+0
+```
